@@ -1,0 +1,59 @@
+{
+  "name": "coveralls-api",
+  "version": "1.0.0",
+  "description": "API client for coveralls.io",
+  "license": "MIT",
+  "author": {
+    "name": "Connor White",
+    "email": "connor.bcw@gmail.com",
+    "url": "https://connorwhite.org"
+  },
+  "homepage": "https://connorwhite.org/github/coveralls-api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bconnorwhite/coveralls-api.git"
+  },
+  "keywords": [
+    "coveralls",
+    "coveralls.io",
+    "api",
+    "client",
+    "node",
+    "browser",
+    "typed",
+    "types",
+    "ts",
+    "typescript"
+  ],
+  "files": [
+    "build"
+  ],
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "bob build",
+    "commit": "bob commit",
+    "lint": "bob lint",
+    "postversion": "git push --follow-tags",
+    "prepublishOnly": "yarn run lint && yarn run build && yarn run test",
+    "test": "bob test"
+  },
+  "dependencies": {
+    "cross-fetch-json": "^1.1.1",
+    "stringify-json-object": "^1.0.5"
+  },
+  "devDependencies": {
+    "@bconnorwhite/bob": "^2.5.2",
+    "dotenv": "^8.2.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-bob"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "bob commit lint"
+    }
+  },
+  "npmpackagejsonlint": {
+    "extends": "npm-package-json-lint-config-bob"
+  }
+}
