@@ -38,7 +38,7 @@
     "test": "bob test"
   },
   "dependencies": {
-    "cross-fetch-json": "^1.1.1",
+    "cross-fetch-json": "^1.1.2",
     "stringify-json-object": "^1.0.5"
   },
   "devDependencies": {
