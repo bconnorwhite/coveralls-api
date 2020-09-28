@@ -16,7 +16,9 @@
 
 To use coveralls-api, you will need a personal token. Personal tokens can be created on the [Coveralls account page](https://coveralls.io/account).
 
-Full documentation: https://coveralls.io/api/docs
+Full documentation:
+- Repos: https://coveralls.io/api/docs
+- Jobs: https://docs.coveralls.io/api-reference
 
 ## Installation
 
@@ -33,6 +35,7 @@ npm install coveralls-api
 - [Create Repo](#create-repo)
 - [Get Repo](#get-repo)
 - [Update Repo](#update-repo)
+- [Post Job](#post-job)
 
 ### Create Repo
 
@@ -160,11 +163,86 @@ type UpdateRepoResponse = {
 }
 ```
 
+### Post Job
+
+#### Usage
+```ts
+import Coveralls from "coveralls-api";
+
+const coveralls = new Coveralls(token);
+
+// From LCOV file:
+coveralls.postJob("github", "my-github-user", "my-repo-name", {
+  lcov_path: "coverage/lcov.info"
+}).then((response) => {
+  // ...
+});
+
+// From source files:
+coveralls.postJob("github", "my-github-user", "my-repo-name", {
+  source_files: [{
+    name: ...
+  }, ...]
+}).then((response) => {
+  // ...
+});
+```
+
+#### Types
+```ts
+function postJob(service: Service, user: string, name: string, args: PostJobArgs | PostJobFromLCOVArgs): Promise<PostJobResponse>;
+
+export type PostJobFromLCOVArgs = {
+  lcov_path: string;
+} & BaseJobArgs;
+
+export type PostJobArgs = {
+  source_files: SourceFile[];
+} & BaseJobArgs;
+
+export type SourceFile = {
+  name: string;
+  source_digest: string;
+  coverage: (number | null)[];
+  branches?: number[];
+  source?: string;
+}
+
+type BaseJobArgs = {
+  service_number?: string;
+  service_job_id?: string;
+  service_pull_request?: string;
+  parallel?: boolean;
+  flag_name?: string;
+  git?: {
+    head: {
+      id: string;
+      committer_name: string;
+      committer_email: string;
+      message: string;
+      author_name: string;
+      author_email: string;
+    };
+    branch: string;
+    remotes: {
+      name: string;
+      url: string;
+    }[];
+  };
+  commit_sha?: string;
+  run_at?: Date | string;
+}
+```
+
 <br />
 
 <h2>Dependencies<img align="right" alt="dependencies" src="https://img.shields.io/david/bconnorwhite/coveralls-api.svg"></h2>
 
+- [@bconnorwhite/exec](https://www.npmjs.com/package/@bconnorwhite/exec): Execute commands while keeping flags easily configurable as an object
 - [cross-fetch-json](https://www.npmjs.com/package/cross-fetch-json): Universal fetch API that only returns JSON
+- [md5](https://www.npmjs.com/package/md5): Js function for hashing messages with MD5
+- [read-file-safe](https://www.npmjs.com/package/read-file-safe): Read files without try catch.
+- [read-lcov-safe](https://www.npmjs.com/package/read-lcov-safe): Read and parse an lcov file without try catch
 - [stringify-json-object](https://www.npmjs.com/package/stringify-json-object): Stringify and format a JSON object.
 
 <br />
@@ -172,6 +250,8 @@ type UpdateRepoResponse = {
 <h2>Dev Dependencies<img align="right" alt="David" src="https://img.shields.io/david/dev/bconnorwhite/coveralls-api.svg"></h2>
 
 - [@bconnorwhite/bob](https://www.npmjs.com/package/@bconnorwhite/bob): Bob is a toolkit for TypeScript projects
+- [@types/md5](https://www.npmjs.com/package/@types/md5): TypeScript definitions for md5
+- [@types/node](https://www.npmjs.com/package/@types/node): TypeScript definitions for Node.js
 - [dotenv](https://www.npmjs.com/package/dotenv): Loads environment variables from .env file
 
 <br />
