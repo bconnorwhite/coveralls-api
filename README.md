@@ -2,13 +2,20 @@
   <h1>coveralls-api</h1>
   <a href="https://npmjs.com/package/coveralls-api">
     <img alt="npm" src="https://img.shields.io/npm/v/coveralls-api.svg">
-  </a>  <a href="https://github.com/bconnorwhite/coveralls-api">
+  </a>
+  <a href="https://github.com/bconnorwhite/coveralls-api">
     <img alt="typescript" src="https://img.shields.io/github/languages/top/bconnorwhite/coveralls-api.svg">
-  </a>  <a href="https://github.com/bconnorwhite/coveralls-api">
+  </a>
+  <a href='https://coveralls.io/github/bconnorwhite/coveralls-api?branch=master'>
+    <img src='https://coveralls.io/repos/github/bconnorwhite/coveralls-api/badge.svg?branch=master' alt='Coverage Status' />
+  </a>
+  <a href="https://github.com/bconnorwhite/coveralls-api">
     <img alt="GitHub stars" src="https://img.shields.io/github/stars/bconnorwhite/coveralls-api?label=Stars%20Appreciated%21&style=social">
-  </a>  <a href="https://twitter.com/bconnorwhite">
+  </a>
+  <a href="https://twitter.com/bconnorwhite">
     <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/bconnorwhite.svg?label=%40bconnorwhite&style=social">
-  </a></div>
+  </a>
+</div>
 
 <br />
 
