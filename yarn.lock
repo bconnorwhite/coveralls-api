@@ -6493,10 +6493,10 @@ parse-json@^5.0.0:
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
 
-parse-lcov@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/parse-lcov/-/parse-lcov-1.0.1.tgz#7a0d7e2bbd7628d759af1b563b76ca321767337e"
-  integrity sha512-Wu8qDC4nShButRVz7G+dyx0PaRKVW19dtfsU69oHM1DF7aSEC6cNOXwbcN5c8N/oincqoOIr0NEWu6t8BBJMyg==
+parse-lcov@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/parse-lcov/-/parse-lcov-1.0.2.tgz#06a5a48558a04a7c91f586f4a9385c32eac01afb"
+  integrity sha512-1srE9PWwWG3x81a2Up7Ki9/NTtaytMuCzD4hOQKIsH5AlZWOO4bn+hgTHLL2s8tg8PDpA7MR1JSya1+ZBdCL4Q==
 
 parse-passwd@^1.0.0:
   version "1.0.0"
@@ -6796,12 +6796,12 @@ read-json-safe@^1.0.1, read-json-safe@^1.0.5:
     parse-json-object "^1.0.5"
     read-file-safe "^1.0.5"
 
-read-lcov-safe@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/read-lcov-safe/-/read-lcov-safe-1.0.0.tgz#0c02a22912cd5b79ec0278e12a458aeb2f96e566"
-  integrity sha512-qEgnrOaH1FN7GVSwfxJ5Rq5pK/DXJ5nGwJmwLSA8u9AEkrB+fI7jx+3NOWxi5Z7sqHsnxOg8wettUvVZaxoe0g==
+read-lcov-safe@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/read-lcov-safe/-/read-lcov-safe-1.0.1.tgz#e6dae3e6e9f1f41de9908802994cf68422f58391"
+  integrity sha512-CqpEm65omc1MVlJ6ocC5emLLf4OnQ7CNvoNs7J72GVX+BbuSDjpCCx3N8lR1626i6CRhE/8RQuI05sJX947zlQ==
   dependencies:
-    parse-lcov "^1.0.1"
+    parse-lcov "^1.0.2"
     read-file-safe "^1.0.5"
 
 read-md-safe@^1.0.1:

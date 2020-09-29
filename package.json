@@ -49,7 +49,7 @@
     "md5": "^2.3.0",
     "parse-json-object": "^2.0.0",
     "read-file-safe": "^1.0.5",
-    "read-lcov-safe": "^1.0.0",
+    "read-lcov-safe": "^1.0.1",
     "stringify-json-object": "^1.0.5"
   },
   "devDependencies": {
