@@ -1,3 +1,12 @@
+## [1.2.3](https://github.com/bconnorwhite/coveralls-api/compare/v1.2.2...v1.2.3) (2020-09-29)
+
+
+### Bug Fixes
+
+* export more types ([d7aa9dd](https://github.com/bconnorwhite/coveralls-api/commit/d7aa9dd421381d8fe8b7c6261f1aac8017d4fc60))
+
+
+
 ## [1.2.2](https://github.com/bconnorwhite/coveralls-api/compare/v1.2.1...v1.2.2) (2020-09-29)
 
 
