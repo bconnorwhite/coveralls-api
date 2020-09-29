@@ -68,12 +68,7 @@ export async function getSourceFiles(lcov_path: string): Promise<SourceFile[]> {
   return readLCOV(lcov_path).then(async (records) => {
     return Promise.all(records.map(async (record) => {
       const path = resolve(process.cwd(), record.file);
-      return readFile(path).then((source) => ({
-        record,
-        source
-      }));
-    })).then((items) => {
-      return items.map(({ source = "", record }) => {
+      return readFile(path).then((source = "") => {
         const { length } = source.split("\n");
         return {
           name: record.file,
@@ -83,6 +78,6 @@ export async function getSourceFiles(lcov_path: string): Promise<SourceFile[]> {
           source
         }
       });
-    });
+    }));
   });
 }
