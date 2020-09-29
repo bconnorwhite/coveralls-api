@@ -64,3 +64,14 @@ export default class Coveralls {
     });
   }
 }
+
+export {
+  CreateRepoArgs,
+  CreateRepoResponse,
+  GetRepoResponse,
+  UpdateRepoArgs,
+  UpdateRepoReponse,
+  PostJobArgs,
+  PostJobFromLCOVArgs,
+  PostJobResponse
+}
