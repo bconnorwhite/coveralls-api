@@ -1,6 +1,6 @@
 {
   "name": "coveralls-api",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "API client for coveralls.io",
   "license": "MIT",
   "author": {

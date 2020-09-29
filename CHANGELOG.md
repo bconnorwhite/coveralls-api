@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/bconnorwhite/coveralls-api/compare/v1.2.0...v1.2.1) (2020-09-29)
+
+
+### Bug Fixes
+
+* dependency bump to fix lcov parsing issue ([3347d08](https://github.com/bconnorwhite/coveralls-api/commit/3347d087926f09b2ed3970c8a124ae56595232bd))
+
+
+
 # [1.2.0](https://github.com/bconnorwhite/coveralls-api/compare/v1.1.1...v1.2.0) (2020-09-29)
 
 
