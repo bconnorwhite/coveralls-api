@@ -1,6 +1,6 @@
 import Coveralls, { Service } from "../";
 import { getSourceFiles, PostJobFromLCOVArgs, SourceFile } from "./from-lcov";
-import { getCommitSHA } from "./git";
+import { getGitData, GitData } from "./git";
 
 export type PostJobResponse = {
   message: string;
@@ -52,21 +52,7 @@ export type BaseJobArgs = {
   /**
    * A hash of Git data that can be used to display more information to users.
    */
-  git?: {
-    head: {
-      id: string;
-      committer_name: string;
-      committer_email: string;
-      message: string;
-      author_name: string;
-      author_email: string;
-    };
-    branch: string;
-    remotes: {
-      name: string;
-      url: string;
-    }[];
-  };
+  git?: GitData;
   /**
    * The current SHA of the commit being built to override the “git” parameter.
    */
@@ -96,8 +82,8 @@ export async function getJobBody(service: Service, user: string, name: string, a
       service_pull_request: args.service_pull_request,
       parallel: args.parallel,
       flag_name: args.flag_name,
-      git: args.git,
-      commit_sha: args.commit_sha ?? await getCommitSHA(),
+      git: args.git ?? await getGitData(),
+      commit_sha: args.commit_sha,
       run_at: typeof args.run_at === "string" ? args.run_at : getRunAt(args.run_at)
     }
     if(hasLCOVPath(args)) {

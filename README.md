@@ -215,18 +215,18 @@ type BaseJobArgs = {
   parallel?: boolean;
   flag_name?: string;
   git?: {
-    head: {
-      id: string;
-      committer_name: string;
-      committer_email: string;
-      message: string;
-      author_name: string;
-      author_email: string;
+    head?: {
+      id?: string;
+      committer_name?: string;
+      committer_email?: string;
+      message?: string;
+      author_name?: string;
+      author_email?: string;
     };
-    branch: string;
-    remotes: {
-      name: string;
-      url: string;
+    branch?: string;
+    remotes?: {
+      name?: string;
+      url?: string;
     }[];
   };
   commit_sha?: string;
