@@ -43,7 +43,7 @@ export default class Coveralls {
   updateRepo(service: Service, user: string, name: string, args: UpdateRepoArgs) {
     return this.fetch<UpdateRepoReponse>(`/repos/${service}/${user}/${name}`, "PUT", args);
   }
-  async postJob(service: Service, user: string, name: string, args: PostJobArgs | PostJobFromLCOVArgs) {
+  async postJob(service: Service, user: string, name: string, args: PostJobArgs | PostJobFromLCOVArgs): Promise<PostJobResponse> {
     return getJobBody(service, user, name, args, this).then((body) => {
       const form = new FormData();
       form.append("json", stringify(body));
