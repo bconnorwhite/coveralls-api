@@ -209,6 +209,7 @@ export type SourceFile = {
 }
 
 type BaseJobArgs = {
+  service_name?: string;
   service_number?: string;
   service_job_id?: string;
   service_pull_request?: string;

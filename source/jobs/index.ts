@@ -29,7 +29,12 @@ export type PostJobArgs = {
 } & BaseJobArgs;
 
 export type BaseJobArgs = {
-    /**
+  /**
+   * The CI service or other environment in which the test suite was run.
+   * This can be anything, but certain services have special features (travis-ci, travis-pro, or coveralls-ruby).
+   */
+  service_name?: string;
+  /**
    * The build number. Will default to chronological numbering from builds on repo.
    */
   service_number?: string;
@@ -77,6 +82,7 @@ export async function getJobBody(service: Service, user: string, name: string, a
     const body: PostJobBody = {
       repo_token: response?.token,
       source_files: [],
+      service_name: args.service_name,
       service_number: args.service_number,
       service_job_id: args.service_job_id,
       service_pull_request: args.service_pull_request,
