@@ -240,7 +240,9 @@ type BaseJobArgs = {
 
 - [@bconnorwhite/exec](https://www.npmjs.com/package/@bconnorwhite/exec): Execute commands while keeping flags easily configurable as an object
 - [cross-fetch-json](https://www.npmjs.com/package/cross-fetch-json): Universal fetch API that only returns JSON
+- [form-data](https://www.npmjs.com/package/form-data): A library to create readable "multipart/form-data" streams. Can be used to submit forms and file uploads to other web applications.
 - [md5](https://www.npmjs.com/package/md5): Js function for hashing messages with MD5
+- [parse-json-object](https://www.npmjs.com/package/parse-json-object): Parse a typed JSON object
 - [read-file-safe](https://www.npmjs.com/package/read-file-safe): Read files without try catch.
 - [read-lcov-safe](https://www.npmjs.com/package/read-lcov-safe): Read and parse an lcov file without try catch
 - [stringify-json-object](https://www.npmjs.com/package/stringify-json-object): Stringify and format a JSON object.

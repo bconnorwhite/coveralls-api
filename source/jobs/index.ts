@@ -3,6 +3,8 @@ import { getSourceFiles, PostJobFromLCOVArgs, SourceFile } from "./from-lcov";
 import { getCommitSHA } from "./git";
 
 export type PostJobResponse = {
+  message: string;
+  url: string;
 }
 
 /**

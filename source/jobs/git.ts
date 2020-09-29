@@ -42,7 +42,7 @@ import { exec } from "@bconnorwhite/exec";
 // }
 
 export async function getCommitSHA() {
-  return exec("git", ["rev-parse", "HEAD"]).then((result) => {
+  return exec("git", ["rev-parse", "HEAD"], { silent: true }).then((result) => {
     return result.textOutput.trim();
   });
 }
