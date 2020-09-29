@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/bconnorwhite/coveralls-api/compare/v1.1.0...v1.1.1) (2020-09-29)
+
+
+### Bug Fixes
+
+* send jobs as form data ([93a4709](https://github.com/bconnorwhite/coveralls-api/commit/93a4709102ca888cc259d5c720eb6b1f8fedcb05))
+
+
+
 # [1.1.0](https://github.com/bconnorwhite/coveralls-api/compare/v1.0.1...v1.1.0) (2020-09-28)
 
 
