@@ -31,7 +31,7 @@ export default class Coveralls {
       headers: {
         authorization: `token ${this.token}`
       },
-      body: stringify(args)
+      body: args ? stringify(args) : undefined
     });
   }
   createRepo(repo: CreateRepoArgs) {
