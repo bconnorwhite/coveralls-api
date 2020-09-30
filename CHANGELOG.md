@@ -1,3 +1,12 @@
+## [1.2.4](https://github.com/bconnorwhite/coveralls-api/compare/v1.2.3...v1.2.4) (2020-09-30)
+
+
+### Bug Fixes
+
+* set response type for postJob ([1147f5b](https://github.com/bconnorwhite/coveralls-api/commit/1147f5bcaab293bc332b61611e7ec8471a5f9dc8))
+
+
+
 ## [1.2.3](https://github.com/bconnorwhite/coveralls-api/compare/v1.2.2...v1.2.3) (2020-09-29)
 
 
