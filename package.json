@@ -53,7 +53,7 @@
     "stringify-json-object": "^1.0.5"
   },
   "devDependencies": {
-    "@bconnorwhite/bob": "^2.6.3",
+    "@bconnorwhite/bob": "^2.9.2",
     "@types/md5": "^2.2.0",
     "@types/node": "^14.11.2",
     "dotenv": "^8.2.0"
@@ -63,7 +63,7 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "bob commit lint"
+      "commit-msg": "bob lint commit"
     }
   },
   "npmpackagejsonlint": {
